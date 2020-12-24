@@ -12,8 +12,13 @@
 웹팩에는 다양한 플러그인이 제공되는데, Babel 플러그인을 사용하면 최신 표준으로 작성된 자바스크립트도 오래된 브라우저에서 실행할 수 있게 변환해준다.
 
 실행 명령어
+
 $ npm install
+
 $ npm run build         // 웹팩 모듈을 이용해서 /src/index.js 를 /public/bundle.js 로 변환한다!
+
 $ npm bbs-server.js
+
+
 
 ![bulletin board](./screenshots/bbs.png)

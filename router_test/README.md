@@ -2,7 +2,9 @@
 리액트 라우터는 여러 개의 페이지를 가진 애플리케이션을 만들 때 사용된다.
 
 실행 코드
+
 $ npm install
+
 $ npm start
 
 ![router practice](./ScreenShot.png)
