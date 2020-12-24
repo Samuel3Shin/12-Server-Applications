@@ -13,11 +13,9 @@
 
 실행 명령어
 
-$ npm install
-
-$ npm run build         // 웹팩 모듈을 이용해서 /src/index.js 를 /public/bundle.js 로 변환한다!
-
-$ npm bbs-server.js
+$ npm install <br>
+$ npm run build         // 웹팩 모듈을 이용해서 /src/index.js 를 /public/bundle.js 로 변환한다! <br>
+$ npm bbs-server.js <br>
 
 
 
