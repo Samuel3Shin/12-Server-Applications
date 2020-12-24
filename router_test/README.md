@@ -1,11 +1,9 @@
 # 완전 간단한 리액트 라우터 실습
 리액트 라우터는 여러 개의 페이지를 가진 애플리케이션을 만들 때 사용된다.
 
-실행 코드
-
-$ npm install
-
-$ npm start
+실행 코드 <br>
+$ npm install <br>
+$ npm start <br>
 
 ![router practice](./ScreenShot.png)
 
