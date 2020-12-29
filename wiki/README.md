@@ -13,4 +13,5 @@ $ npm run build:parser    // 웹팩 모듈을 이용해서 /src/index.js 를 /pu
 $ npm start <br>
 
 
-![chat](./screenshots/chat.png)
+![chat](./screenshots/show.png)
+![chat](./screenshots/edit.png)

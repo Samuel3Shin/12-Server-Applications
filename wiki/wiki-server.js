@@ -1,6 +1,5 @@
 // 위키 웹 서버
 
-
 // 데이터 베이스에 접속
 const path = require('path')
 const NeDB = require('nedb')
