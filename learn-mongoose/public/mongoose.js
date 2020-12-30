@@ -129,6 +129,7 @@ document.getElementById('user-form').addEventListener('submit', async (e) => {
     e.target.married.checked = false;
 });
 
+// 댓글 등록시
 document.getElementById('comment-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const id = e.target.userid.value;
