@@ -11,7 +11,6 @@ MySQL을 wrapping 하는 sequalize 모듈을 이용한다. <br>
 
 실행 명령어 <br>
 $ npm install <br>
-$ npm run build:parser    // 웹팩 모듈을 이용해서 /src/index.js 를 /public/bundle.js 로 변환한다! <br>
 $ npm start <br>
 
 ![nodebird](./screenshots/login.png) <br>
