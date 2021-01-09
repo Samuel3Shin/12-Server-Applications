@@ -7,7 +7,14 @@ const app = express()
 const server = require('http').createServer(app)
 const portNum = 3000
 server.listen(portNum, () => {
-    console.log('서버 실행 완료:', 'http://localhost:' + portNum)
+    let today = new Date();
+    let hours = today.getHours(); // 시
+    let minutes = today.getMinutes();  // 분
+    let seconds = today.getSeconds();  // 초
+    let milliseconds = today.getMilliseconds(); // 밀리초
+    console.log(hours + '시 ' + minutes + '분 ' + seconds + '초 ' + milliseconds);
+    
+    console.log('[서버] 실행 완료:', 'http://localhost:' + portNum)
 })
 
 // express.static 으로 /public 디렉터리에 있는 페이지들을 공개한다.
@@ -24,12 +31,27 @@ const io = socketio.listen(server)
 
 // 클라이언트가 접속했을 때의 이벤트 설정
 io.on('connection', (socket) => {
-    console.log('사용자 접속:', socket.client.id)
+    let today = new Date();
+    let hours = today.getHours(); // 시
+    let minutes = today.getMinutes();  // 분
+    let seconds = today.getSeconds();  // 초
+    let milliseconds = today.getMilliseconds(); // 밀리초
+    console.log(hours + '시 ' + minutes + '분 ' + seconds + '초 ' + milliseconds);
+
+    console.log('[서버] 클라이언트의 소켓이 연결됨')
+    console.log('[서버] 사용자 접속:', socket.client.id)
 
     // 메시지를 받을 경우.
     // 'chat-msg'라는 변수는 개발자가 임의로 정할 수 있다.
     socket.on('chat-msg', (msg) => {
-        console.log('message:', msg)
+        let today = new Date();
+        let hours = today.getHours(); // 시
+        let minutes = today.getMinutes();  // 분
+        let seconds = today.getSeconds();  // 초
+        let milliseconds = today.getMilliseconds(); // 밀리초
+        console.log(hours + '시 ' + minutes + '분 ' + seconds + '초 ' + milliseconds);
+
+        console.log('[서버] 메시지를 받음. message:', msg)
         // "io.emit(<메시지 종류>, <데이터>)"로 모든 클라이언트에게 메시지를 전달한다.
         io.emit('chat-msg', msg)
     })

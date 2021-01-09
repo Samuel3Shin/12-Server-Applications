@@ -8,6 +8,16 @@ import styles from './styles.js'
 // 클라이언트의 모듈 이름은 "socket.io"가 아니고 "socket.io-slcient"이다.
 import socketio from 'socket.io-client'
 const socket = socketio.connect('http://localhost:3000')
+let today = new Date();
+let hours = today.getHours(); // 시
+let minutes = today.getMinutes();  // 분
+let seconds = today.getSeconds();  // 초
+let milliseconds = today.getMilliseconds(); // 밀리초
+console.log(hours + '시 ' + minutes + '분 ' + seconds + '초 ' + milliseconds);
+
+console.log('[클라] 클라이언트가 소켓 연결을 시도함!')
+
+
 
 // 입력 양식 컴포넌트
 class ChatForm extends React.Component {
@@ -34,6 +44,14 @@ class ChatForm extends React.Component {
             name: this.state.name,
             message: this.state.message
         })
+        let today = new Date();
+        let hours = today.getHours(); // 시
+        let minutes = today.getMinutes();  // 분
+        let seconds = today.getSeconds();  // 초
+        let milliseconds = today.getMilliseconds(); // 밀리초
+        console.log(hours + '시 ' + minutes + '분 ' + seconds + '초 ' + milliseconds);
+        
+        console.log('[클라] 메시지 전송')
         this.setState({message: ''})
     }
 
@@ -68,7 +86,14 @@ class ChatApp extends React.Component {
         socket.on('chat-msg', (obj) => {
             const logs2 = this.state.logs
             obj.key = 'key_' + (this.state.logs.length + 1)
-            console.log(obj)
+            let today = new Date();
+            let hours = today.getHours(); // 시
+            let minutes = today.getMinutes();  // 분
+            let seconds = today.getSeconds();  // 초
+            let milliseconds = today.getMilliseconds(); // 밀리초
+            console.log(hours + '시 ' + minutes + '분 ' + seconds + '초 ' + milliseconds);
+            
+            console.log('[클라] 메시지를 컴포넌트에 넣는다', obj)
             logs2.unshift(obj) // 로그에 추가한다.
             this.setState({logs:logs2})
         })
